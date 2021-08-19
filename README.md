@@ -1,3 +1,3 @@
 # Mean-Stack-all-project-
 
-** All projects **
+*** All projects ***
