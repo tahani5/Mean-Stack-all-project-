@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark p-4"></nav>
+
+
+<div class="conten" style="padding: 10rem; padding-left: 23rem;">
+
+  <div class="card" style="width: 75%; ">
+    <div class="card-body">
+
+      <div class="col s6">
+        <h2 >Quiz Registration</h2>
+      </div>
+      <div class="col s6">
+        <img src="assets/question-mark-2405202_1920.png" style="width:250px;height:250px;  " class="offset-s3">
+      </div>
+
+      <form [formGroup]="messag" (ngSubmit)="onSubmit()" >
+        <h3 *ngIf="success"> The Form is valid now!</h3>
+
+        <div class="mb-3">
+          <i class="fas fa-user-circle " > </i>  
+          <label for="name" class=" card-subtitle mb-2 text-muted"> Name: </label>
+          <input type="text" class="form-control" formControlName="name" >
+          <div *ngIf="submitted && messag.controls.name.errors">
+            <div *ngIf="messag.controls.name.errors.required">Your Name is required</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <i class="fas fa-envelope-square"></i>
+          <label for="email" class=" card-subtitle mb-2 text-muted">Email address</label>
+          <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp"  >
+          <div *ngIf="submitted && messag.controls.email.errors">
+            <div *ngIf="messag.controls.email.errors.required">Your email is required</div>
+          </div>          
+        
+        </div >
+        
+        <div class="d-grid gap-2"  >
+          <button  type="submit"  onclick= "parent.location='quiz'" class=" btn btn-primary" >Submit</button>
+        </div>
+   
+      </form>
+
+  
+
+    </div>
+  </div>
+</div>

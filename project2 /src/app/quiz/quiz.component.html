@@ -1,0 +1,36 @@
+
+
+<app-navbar></app-navbar>
+
+<div class="container mt-5" style="padding:5rem;">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h4>IT Quiz</h4><span>(3 Questions)</span>
+                    </div>
+                </div>
+                <div class="question bg-white p-3 border-bottom" *ngFor="let q of Question">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2" >{{q}}</h5>
+                    </div>
+                    <div class="ans ml-2"*ngFor="let A of Answer">
+                        <label class="radio"> <input type="radio" name="brazil" value="brazil"> <span>{{A}}</span>
+                        </label>
+                    </div>
+                </div>
+
+               
+
+
+                <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                    <button class="btn btn-primary d-flex align-items-center btn-danger" type="button" onclick="parent.location='result'">&nbsp;Submit Quiz</button>
+                </div>
+            </div>
+        </div >
+    </div>
+</div>
+
+
