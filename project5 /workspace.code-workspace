@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "frontendp5"
+		},
+		{
+			"path": "backendp5"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
